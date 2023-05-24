@@ -1,3 +1,3 @@
 # metatools
 
-Practical acessory tools for conducting meta-analysis
+Practical accessory tools for conducting meta-analysis
