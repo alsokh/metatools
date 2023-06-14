@@ -3,7 +3,7 @@
 # this is a method to overcome unit-of-anlysis error
 
 # it gets the number of measures, mean of each effect, and standard deviation and merge the studies keeping the number of measures
-mean_sd_pool <- function(n, means, sds) {
+mean_pool <- function(n, means, sds) {
   x <- 0
   y <- 0
   for (i in (1:length(means))) {
