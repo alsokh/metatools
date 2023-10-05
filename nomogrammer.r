@@ -11,7 +11,8 @@ nomogrammer <- function(Prevalence,
                         Detail = FALSE,
                         NullLine = FALSE,
                         LabelSize = (14/5),
-                        Verbose = FALSE){
+                        Verbose = FALSE,
+                        plot = FALSE){
 
 ## Function inputs:
     # Prevalence (prior probability) as a number between 0 and 1
@@ -304,8 +305,16 @@ if(Verbose == TRUE){
     )
     }
 
+  if (plot) {
+    # Generate and display the plot
+    return(p)
+    } else {
+    # Generate and return text result
+    cat("post-test probability with the prevalence of ", Prevalence, " is as follows:", "\n", "\n",
+    "PLR: ", PLR, "   -->   ", "post-test probability: ", round(post_prob_pos, 4), "\n",
+    "NLR: ", NLR, "   -->   ", "post-test probability: ", round(post_prob_neg, 4))
+  }
 
-return(p)
 
 }
 
